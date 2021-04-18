@@ -40,7 +40,8 @@ def generate_config(name):
         x = list(x.items())
         x = np.array(x)
         print(name + ".cpp > Adding new row > Classname: " + x[0][1])
-        file.write('{"' + x[0][1] + '", ' + x[1][1] + ', ' + x[2][1] + ', -1, -1, "' + x[3][1] + '"};\n' )
+        file.write('{"' + x[0][1] + '", ' + x[1][1] + ', ' + x[2][1] + ', -1, -1, "' + x[3][1] + '"},\n' )
+        
     end = time.time()
     print("Generating: " + name + ".cpp done in: " + str(round(end - start, 2)) + "s")
 
